@@ -10,9 +10,10 @@ import urllib.request
 from urllib import request, parse
 
 url = 'https://python.org'
+wangpan_url = 'https://pan.baidu.com/disk/home?errno=0&errmsg=Auth%20Login%20Sucess&&bduss=&ssnerror=0&traceid=#/all?path=%2F&vmode=list'
 url_post = 'http://httpbin.org/post'
 
-def use_Request():
+def use_Request(url):
     request = urllib.request.Request(url)
     response = urllib.request.urlopen(request)
     print(response.read().decode('utf-8'))
@@ -29,5 +30,5 @@ def param_to_Request():
     response = request.urlopen(req)
     print(response.read().decode('utf-8'))
 
-#use_Request()
-param_to_Request()
+use_Request(wangpan_url)
+#param_to_Request()
